@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FirstwebappApplication {
 
 	public static void main(String[] args) {
-		System.out.println("ok");
 		SpringApplication.run(FirstwebappApplication.class, args);
 	}
 
