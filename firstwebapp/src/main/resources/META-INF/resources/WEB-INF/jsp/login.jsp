@@ -5,8 +5,8 @@
 	<body>
 		<h1>  jsp</h1>
 		<form method="post">
-		Name: <input type="text" name="Name">
-		Password: <input type="text" name="Password">
+		Name: <input type="text" name="NAME">
+		Password: <input type="text" name="PASSWORD">
 		<input type="submit">
 		</form>
 	</body>
