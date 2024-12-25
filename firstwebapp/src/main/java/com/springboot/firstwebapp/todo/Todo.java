@@ -52,6 +52,6 @@ public class Todo {
 		return "Todo [id=" + id + ", name=" + name + ", description=" + description + ", targetDate=" + targetDate
 				+ ", done=" + done + "]";
 	}
-	
+	 
 	
 }
