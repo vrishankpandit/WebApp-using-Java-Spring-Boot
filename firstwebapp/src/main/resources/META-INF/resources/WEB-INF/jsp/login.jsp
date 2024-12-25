@@ -4,6 +4,7 @@
 	</head>
 	<body>
 		<h1>  jsp</h1>
+		<pre>${errorMessage}</pre>
 		<form method="post">
 		Name: <input type="text" name="NAME">
 		Password: <input type="text" name="PASSWORD">
