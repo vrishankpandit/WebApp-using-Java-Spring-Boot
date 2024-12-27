@@ -3,8 +3,10 @@
 		<title>  Welcome </title>
 	</head>
 	<body>
-		<div>  Welcome</div>
-	<div>Your name : ${NAME}</div>
-	<a href="list-todos">Manage</a>
+		<div class="container">
+			<h1>  Welcome</h1>
+			<h1>Your name : ${NAME}</h1>
+			<a href="list-todos">Manage</a>
+		</div>
 	</body>
 </html>
