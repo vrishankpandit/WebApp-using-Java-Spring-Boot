@@ -15,7 +15,7 @@
 							<form:errors path="description" cssClass="text-warning"/>
 			<form:input type="hidden" path="id"/>
 			<form:input type="hidden" path="done"/>
-			<input type="submit" class="bn btn-success"/> 
+			<input type="submit" class="btn btn-success"/> 
 		</form:form>
 	</div>
 		<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
