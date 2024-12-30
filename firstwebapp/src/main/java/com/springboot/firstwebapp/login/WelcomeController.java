@@ -1,5 +1,7 @@
 package com.springboot.firstwebapp.login;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,13 @@ public class WelcomeController {
 	//Get
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String GoToWelcomePage(ModelMap model) {		
-		model.put("NAME","Vrishank");
+		model.put("NAME",getLoginUsername());
 		return "Welcome";
+	}
+	
+	private String getLoginUsername() {
+		Authentication auth=SecurityContextHolder.getContext().getAuthentication();
+		return auth.getName();
 	}
 	
 //	//Post ,when submit button is clicked,it handles the post request as in the html(jsp),from method is post 
