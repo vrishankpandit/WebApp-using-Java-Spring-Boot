@@ -27,5 +27,6 @@
 			</tbody>
 		</table>
 	<a href="add-todo" class="btn btn-success">Add Todo</a>
+	</div>
 	<%@ include file="common/Footer.jspf" %>>
 	
