@@ -9,41 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@SessionAttributes("NAME")
+@SessionAttributes("name")
 public class WelcomeController {
-	
-//	private AuthenticationService authenticationService;
-//		
-//	public LoginController(AuthenticationService authenticationService) {
-//		super();
-//		this.authenticationService = authenticationService;
-//	}
 
-	//Get
 	@RequestMapping(value="/",method = RequestMethod.GET)
-	public String GoToWelcomePage(ModelMap model) {		
-		model.put("NAME",getLoginUsername());
-		return "Welcome";
+	public String gotoWelcomePage(ModelMap model) {
+		model.put("name", getLoggedinUsername());
+		return "welcome";
 	}
 	
-	private String getLoginUsername() {
-		Authentication auth=SecurityContextHolder.getContext().getAuthentication();
-		return auth.getName();
+	private String getLoggedinUsername() {
+		Authentication authentication = 
+				SecurityContextHolder.getContext().getAuthentication();
+		return authentication.getName();
 	}
-	
-//	//Post ,when submit button is clicked,it handles the post request as in the html(jsp),from method is post 
-//	@RequestMapping(value="login",method = RequestMethod.POST)
-//	public String GoToWelcomePage(@RequestParam("NAME") String name,@RequestParam("PASSWORD") String password,
-//				ModelMap model) {
-//		if(authenticationService.auth(name, password)) {
-//			
-//			model.put("NAME",name);
-////			model.put("PASSWORD",password);
-//			return "Welcome";
-//		}
-//		
-//		model.put("errorMessage","Invalid Credentials please try again !!!");
-//		return "login";
-//	}
-	
 }
